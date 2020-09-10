@@ -27,10 +27,10 @@ def wavOrth2d(im, nz, wname='haar', wtype=1, mode="symmetric"):
     sx,sy = numpy.shape(im)
     scale = nz
     if scale > numpy.ceil(numpy.log2(sx))+1 or scale > numpy.ceil(numpy.log2(sy))+1:
-        print "Too many decomposition scales! The decomposition scale will be set to default value: 1!"
+        print( "Too many decomposition scales! The decomposition scale will be set to default value: 1!")
         scale = 1
     if scale < 1:
-        print "Decomposition scales should not be smaller than 1! The decomposition scale will be set to default value: 1!"
+        print( "Decomposition scales should not be smaller than 1! The decomposition scale will be set to default value: 1!")
         scale = 1
     
     band = numpy.zeros((scale+1,len(numpy.shape(im))))
